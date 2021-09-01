@@ -1,5 +1,9 @@
 # SHCoach
 
+Demo project app + multi-platform XCFramework to help the creation of custom ShazamKit catalogs from audio files or recordings.
+
+----------------------------
+
 Xcode project contains three targets:
 
 * `SHCoach (iOS)`, demo iOS app for users trying to generate a custom ShazamKit catalog. Can be used on any iOS device (iOS 15) and from macOS Catalyst.
@@ -15,7 +19,7 @@ In order for the target to be distributed as a framework there are a couple of s
 * Enable **Build Library for Distribution** under **Build Settings** for the `SHCoachFramework`. This can also be done in the console when calling `xcodebuild` as `BUILD_LIBRARIES_FOR_DISTRIBUTION=YES`. Generates a binary interface so the framework is compatible with different compiler and/or Xcode versions.
 * Disable **Skip Install** under **Build Settings** for the `SHCoachFramework`. This can also be done in the console when calling `xcodebuild` as `SKIP_INSTALL=NO`. Causes the framework to be copied into the archive which will be used to create the `.xcframework`. 
 
-When the `build.sh` script finishes the resulting framework will be stored on `$HOME`.
+When the `build.sh` script finishes the resulting framework will be stored on `$HOME`. Then you can use it on any project you want by importing it to the Xcode project as you would do with any other framework.
 
 ---------------------------------
 
