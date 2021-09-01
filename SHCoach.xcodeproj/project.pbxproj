@@ -673,7 +673,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = in.javierdemart.SHCoachDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = in.javierdemart.SHCoach;
 				PRODUCT_NAME = SHCoach;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
@@ -707,7 +707,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = in.javierdemart.SHCoachDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = in.javierdemart.SHCoach;
 				PRODUCT_NAME = SHCoach;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;

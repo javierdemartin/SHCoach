@@ -10,11 +10,12 @@ import SwiftUI
 #if !os(macOS) || !targetEnvironment(macCatalyst)
 struct ImportFromRecordView: View {
     
+    /// 
     @EnvironmentObject var creator: SHCatalogCreator
     
     @State var isRecording: Bool = false
     
-    @State var loadedUrls: [SHCoachCustomSignatureModel] = []
+    @State var capturedCustomSignatures: [SHCoachCustomSignatureModel] = []
     
     @State var presentFileMover: Bool = false
     
@@ -66,12 +67,12 @@ struct ImportFromRecordView: View {
                 }
             }
         }
-        .fileMover(isPresented: $presentFileMover, file: settings.shazamModelURL, onCompletion: { result in
+        .fileMover(isPresented: $presentFileMover, file: settings.shazamCatalogUrl, onCompletion: { result in
             switch result {
                 
             case .success(let exportedUrl):
                 
-                settings.shazamModelURL = exportedUrl
+                settings.shazamCatalogUrl = exportedUrl
                 
                 NSLog("Saved custom model to \(exportedUrl)")
             case .failure(let error):
@@ -88,14 +89,14 @@ struct ImportFromRecordView: View {
                     
                     guard let url = try? creator.export(catalog) else { return }
                     
-                    settings.shazamModelURL = url
+                    settings.shazamCatalogUrl = url
                     
                     presentFileMover.toggle()
                     
                 }, label: {
                     Label("Export", systemImage: "square.and.arrow.up")
                 })
-                    .disabled(creator.customSignatures.isEmpty || settings.shazamModelURL == nil)
+                    .disabled(creator.customSignatures.isEmpty)
             }
         }
     }

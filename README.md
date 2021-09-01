@@ -21,7 +21,7 @@ When the `build.sh` script finishes the resulting framework will be stored on `$
 
 ## Documentation
 
-Project contains documentad code alongside a [DocC](https://developer.apple.com/documentation/docc) documentation project.
+Project contains documentad code alongside a [DocC](https://developer.apple.com/documentation/docc) documentation project which can be exported when using Xcode 13 or newer.
 
 
 ## Demo App
@@ -50,10 +50,8 @@ Alternatively, to test a `SHCustomCatalog` and making use of `AVAudioEngineMocka
 If some of the following errors happen
 
 ```
-...
 /SHCoachFramework/SHCatalogCreator.swift:9:8: error: no such module 'ShazamKit'
 import ShazamKit
-...
 ```
 
 or
@@ -73,7 +71,7 @@ After creating a `xcframework` always build against a real target of the destina
 
 If the situation needed it a XCFramework can be distributed through a Swift Package that contains the binary framework inside allowing us to keep the source code private.
 
-## References
+## Interesting References
 
 * [Session 10147 WWDC 2020 - Distribute binary frameworks as Swift Packages](https://developer.apple.com/wwdc20/10147)
 * [Session 416 WWDC 2019 - Binary Frameworks in Swift](https://developer.apple.com/wwdc19/416) 

@@ -32,7 +32,7 @@ struct TesterView: View {
           
                 GeometryReader { g in
                     Button(action: {
-                        guard let url = settings.shazamModelURL else { return }
+                        guard let url = settings.shazamCatalogUrl else { return }
 
                         try! identifier.match(from: url)
                     }, label: {
@@ -77,7 +77,7 @@ struct TesterView: View {
 
                     do {
                         try identifier.match(from: customCatalogURl)
-                        settings.shazamModelURL = customCatalogURl
+                        settings.shazamCatalogUrl = customCatalogURl
                     } catch {
                         NSLog("Error importing custom catalog: \(error.localizedDescription)")
                     }

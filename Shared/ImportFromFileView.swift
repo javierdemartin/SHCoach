@@ -35,12 +35,12 @@ struct ImportFromFileView: View {
                 }
             }
         }
-        .fileMover(isPresented: $presentFileMover, file: settings.shazamModelURL, onCompletion: { result in
+        .fileMover(isPresented: $presentFileMover, file: settings.shazamCatalogUrl, onCompletion: { result in
             switch result {
                 
             case .success(let exportedUrl):
                 
-                settings.shazamModelURL = exportedUrl
+                settings.shazamCatalogUrl = exportedUrl
                 
                 print("Saved to \(exportedUrl)")
             case .failure(let error):
@@ -50,7 +50,6 @@ struct ImportFromFileView: View {
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
 
-                
                 Button(action: {
                     fileImportedPresented.toggle()
                 }, label: {
@@ -64,13 +63,13 @@ struct ImportFromFileView: View {
 
                     guard let url = try? creator.export(catalog) else { return }
 
-                    settings.shazamModelURL = url
+                    settings.shazamCatalogUrl = url
 
                     presentFileMover.toggle()
                 }, label: {
                     Label("Export", systemImage: "square.and.arrow.up")
                 })
-                    .disabled(creator.customSignatures.isEmpty || settings.shazamModelURL == nil)
+                    .disabled(creator.customSignatures.isEmpty)
             }
         }
         .fileImporter(isPresented: $fileImportedPresented, allowedContentTypes: settings.supportedAudioInputFiles, allowsMultipleSelection: true, onCompletion: { result in

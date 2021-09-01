@@ -1,6 +1,6 @@
 # ``SHCoachFramework``
 
-`SHCoach` is a multiplatform Swift framework that helps you with the creation of a [custom catalog](https://developer.apple.com/documentation/shazamkit/shcustomcatalog).
+`SHCoach` is a multiplatform Swift framework that helps you with the creation of a custom catalog.
 
 Supported architectures for this framework are:
 

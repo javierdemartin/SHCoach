@@ -21,7 +21,8 @@ fileprivate extension AVURLAsset {
 }
 
 /**
- Test all the functionality of both `SHCatalogCreator` & `SHCatalogInstance`. Each test case will create
+ Test all the functionality of both `SHCatalogCreator` & `SHCatalogInstance` capabilities of creating a
+ custom `ShazamKit` catalog and audio matching.
  */
 class Tests_iOS: XCTestCase {
     
@@ -37,7 +38,7 @@ class Tests_iOS: XCTestCase {
     /// Create a `SHCustomCatalog` with a full-length audio. And try to match that song
     /// against a short excerpt of another song that's not the one used on the original
     /// `SHCustomCatalog` causing it to fail.
-    /// /// Will succeed if a match is **not** found.
+    /// Will succeed if a match is **not** found.
     func testCheckWrongMatch() throws {
         
         let creator = SHCatalogCreator(audioEngine: FakeMicrophone())
@@ -69,7 +70,7 @@ class Tests_iOS: XCTestCase {
         DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 5.0, execute: {
             
             if case .matchFound = matcher.state {
-                fatalError("")
+                fatalError("A match shouldn't have been made as both songs are different.")
             } else {
                 expectation.fulfill()
             }
@@ -162,9 +163,6 @@ class Tests_iOS: XCTestCase {
     func testCreateCustomCatalogAndExport() throws {
         
         let expectation = XCTestExpectation(description: "Creating a sample signature from an audio file.")
-        
-        print(correctLongSong.pathExtension)
-        print(correctLongSong.pathExtension)
         
         guard let nonAudioFilePath = Bundle(for: type(of: self)).url(forResource: correctLongSong.fileNameWithoutExtension, withExtension: correctLongSong.pathExtension) else {
             fatalError("Could not find \(correctLongSong) in project.")
