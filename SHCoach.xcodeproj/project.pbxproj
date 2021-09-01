@@ -104,7 +104,6 @@
 		80DD95F126D94C5B0096882E /* SHCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DD95FC26D94C5B0096882E /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DD960026D94C5B0096882E /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
-		80DD960A26D94C5B0096882E /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		80DD962726D94FD20096882E /* RecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderView.swift; sourceTree = "<group>"; };
 		80DF9FE326DF71290046D190 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		80DF9FE726DF72120046D190 /* SHSessionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSessionStatus.swift; sourceTree = "<group>"; };
@@ -186,7 +185,6 @@
 				804508EC26DAE87600DB7294 /* Packages */,
 				80DD95E926D94C5A0096882E /* Shared */,
 				80DD95FF26D94C5B0096882E /* Tests iOS */,
-				80DD960926D94C5B0096882E /* Tests macOS */,
 				802E116626DC38CA00930189 /* SHCoachFramework */,
 				80DD95F226D94C5B0096882E /* Products */,
 				80799E0A26DAE2DB005D5934 /* Frameworks */,
@@ -222,14 +220,6 @@
 				80DD960026D94C5B0096882E /* Tests_iOS.swift */,
 			);
 			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		80DD960926D94C5B0096882E /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				80DD960A26D94C5B0096882E /* Tests_macOS.swift */,
-			);
-			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 		80DD962626D94FC80096882E /* Views */ = {
