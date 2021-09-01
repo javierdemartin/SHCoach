@@ -84,6 +84,7 @@
 		802E116526DC38CA00930189 /* SHCoachFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SHCoachFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		802E116726DC38CA00930189 /* SHCoachFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHCoachFramework.h; sourceTree = "<group>"; };
 		802E116826DC38CA00930189 /* SHCoachFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SHCoachFramework.docc; sourceTree = "<group>"; };
+		80488DC426E0021300F8C7C0 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		804B366426DC4C3000426635 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		804B366526DC4C3000426635 /* SHCatalogCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHCatalogCreator.swift; sourceTree = "<group>"; };
 		804B366626DC4C3000426635 /* SHCatalogMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHCatalogMatcher.swift; sourceTree = "<group>"; };
@@ -179,6 +180,7 @@
 		80DD95E426D94C5A0096882E = {
 			isa = PBXGroup;
 			children = (
+				80488DC426E0021300F8C7C0 /* build.sh */,
 				8057F18A26DF8E2F0021207E /* SHCoach--iOS--Info.plist */,
 				804B368726DCF0DB00426635 /* README.md */,
 				801AF59A26DBD8EC002B7CEC /* Resources */,
