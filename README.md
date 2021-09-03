@@ -2,6 +2,8 @@
 
 Demo project app + multi-platform XCFramework to help the creation of custom ShazamKit catalogs from audio files or recordings.
 
+[Demo video of the app & framework in use](https://youtu.be/0_F7Bn3Ta2o)
+
 ----------------------------
 
 Xcode project contains three targets:
