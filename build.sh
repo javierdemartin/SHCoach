@@ -1,14 +1,15 @@
 # Javier de Martín Gil
-#
+# --------------------
 # 
+# Build script that automatically creates a multi-platform
+# XCFramework of the SHCoachFramework on your $HOME directory
+#
 
 BUILD_SCHEME="SHCoachFramework"
 
 WORKING_DIR=$HOME
 
 FRAMEWORK_NAME="SHCoachFramework"
-
-echo $WORKING_DIR
 
 SIMULATOR_ARCHIVE_PATH="${WORKING_DIR}/${BUILD_SCHEME}-iphonesimulator.xcarchive"
 IOS_ARCHIVE_PATH="${WORKING_DIR}/${BUILD_SCHEME}-ios.xcarchive"
