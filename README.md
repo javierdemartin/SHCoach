@@ -25,6 +25,12 @@ When the `build.sh` script finishes the resulting framework will be stored on `$
 
 ---------------------------------
 
+As of **Xcode 13 there is a new way to build cross platform frameworks from a single target from inside Xcode**. It's described more in depth in [Session 10210 @ WWDC'21 Explore advanced project configuration in Xcode](https://developer.apple.com/videos/play/wwdc2021/10210/). Steps to follow are,
+
+1. Select your multi-platform target from the project pane on the left. Go to *Build Settings* and enable *Allow multi-platform builds* under the *Build Options* section.
+2. On that same tab but under *Architectures* section select *Any Platform* for the *Supported Platforms* settings.
+3. Change to the *Build Phases* tab and under *Compile Sources* for each file that will go into the framework select the platforms you want to enable/disable from the *Filters* column. If you haven't touched anything previously here it should be marked as *Always Used*.
+
 ## Documentation
 
 Project contains documentad code alongside a [DocC](https://developer.apple.com/documentation/docc) documentation project which can be exported when using Xcode 13 or newer.
