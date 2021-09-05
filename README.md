@@ -8,7 +8,7 @@ Demo project app + multi-platform XCFramework to help the creation of custom Sha
 
 Xcode project contains three targets:
 
-* `SHCoach (iOS)`, demo iOS app for users trying to generate a custom ShazamKit catalog. Can be used on any iOS device (iOS 15) and from macOS Catalyst.
+* `SHCoach (iOS)`, demo iOS app for users trying to generate a custom ShazamKit catalog. Can be used on any iOS device (iOS 15) and from macOS Catalyst (iPad mode).
 * `Tests iOS`, target containing tests for the developed framework
 * `SHCoachFramework`, contains the framework code which will be wrapped onto a multi platform XCFramework using a build script
 
